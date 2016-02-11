@@ -38,7 +38,7 @@ const html = () => {
 }
 ```
 
-This module gives you a few tagged template literals for either stripping all newlines+whitespace or just unindenting:
+This module gives you a few tagged template literals for either stripping all newlines and whitespace or just unindenting the string literal:
 
 ```js
 import {minify, unindent} from 'html-tagged-literals'

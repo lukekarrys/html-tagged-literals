@@ -7,7 +7,7 @@ const taggedLiteral = (literals = [], ...values) => {
 }
 
 const initialWhitespace = (str = '') => {
-  const stripped = str.replace(/\n/g, '').replace(/\n\s*\n/g, '\n')
+  const stripped = str.replace(newlines, '').replace(emptyLines, '\n')
   let count = 0
 
   for (let i = 0, m = stripped.length; i < m; i++) {
@@ -21,14 +21,17 @@ const initialWhitespace = (str = '') => {
   return count
 }
 
-const stripAll = /\n\s*/g
+const newlines = /\n/g
+const emptyLines = /\n\s*\n/g
+const whitespaceAfterNewlines = /\n\s*/g
+const trailingNewline = /\n$/
 const stripNewlineWhitespace = (str) => new RegExp(`\\n\\s{${initialWhitespace(str)}}`, 'g')
 const stripFirstNewlineWhitespace = (str) => new RegExp(`^\\n\\s{${initialWhitespace(str)}}`)
 
 export const minify = (...args) =>
   taggedLiteral(...args)
   // Strip all newlines followed by any number of spaces
-  .replace(stripAll, '')
+  .replace(whitespaceAfterNewlines, '')
 
 export const unindent = (literals = [], ...args) =>
   taggedLiteral(literals, ...args)
@@ -37,6 +40,6 @@ export const unindent = (literals = [], ...args) =>
   // Replace all other newlines + initial whitespace with newlines
   .replace(stripNewlineWhitespace(literals[0]), '\n')
   // Replace empty blank lines with newlines
-  .replace(/\n\s*\n/g, '\n')
+  .replace(emptyLines, '\n')
   // Strip trailing newline
-  .replace(/\n$/, '')
+  .replace(trailingNewline, '')
