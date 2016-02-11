@@ -1,0 +1,52 @@
+{
+  "name": "html-tagged-literals",
+  "description": "Tagged literals for altering newlines and whitespace when dealing with HTML.",
+  "version": "1.0.0",
+  "author": "Luke Karrys <luke@lukekarrys.com>",
+  "bugs": {
+    "url": "https://github.com/lukekarrys/html-tagged-literals/issues"
+  },
+  "devDependencies": {
+    "babel": "^6.5.1",
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-tape-runner": "^2.0.0",
+    "precommit-hook": "^3.0.0",
+    "standard": "^6.0.4",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.4.0"
+  },
+  "files": [
+    "lib/index.js",
+    "src/index.js"
+  ],
+  "homepage": "https://github.com/lukekarrys/html-tagged-literals#readme",
+  "keywords": [
+    "es6",
+    "html",
+    "tagged literals"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lukekarrys/html-tagged-literals.git"
+  },
+  "scripts": {
+    "compile": "babel src --out-dir lib",
+    "lint": "standard",
+    "prepublish": "npm run compile",
+    "test": "babel-tape-runner test/*.js | tap-spec",
+    "validate": "npm ls"
+  },
+  "standard": {
+    "ignore": [
+      "lib/*"
+    ]
+  }
+}
