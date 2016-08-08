@@ -1,7 +1,7 @@
 {
   "name": "html-tagged-literals",
   "description": "Tagged literals for modifying newlines and whitespace in HTML string literals.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Luke Karrys <luke@lukekarrys.com>",
   "bugs": {
     "url": "https://github.com/lukekarrys/html-tagged-literals/issues"
