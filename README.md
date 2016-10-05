@@ -26,7 +26,7 @@ const html = () => {
     <!DOCTYPE html>
     <html>
       <head>
-        <link rel="stylesheet" href="${context.css}">
+        <link rel="stylesheet" href="${css}">
       </head>
       <body>
         <div id="container">
