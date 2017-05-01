@@ -1,11 +1,11 @@
 html-tagged-literals
 ==================
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/lukekarrys/html-tagged-literals.svg)](https://greenkeeper.io/)
-
 [![NPM](https://nodei.co/npm/html-tagged-literals.png)](https://nodei.co/npm/html-tagged-literals/)
 [![Build Status](https://travis-ci.org/lukekarrys/html-tagged-literals.png?branch=master)](https://travis-ci.org/lukekarrys/html-tagged-literals)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[![Greenkeeper badge](https://badges.greenkeeper.io/lukekarrys/html-tagged-literals.svg)](https://greenkeeper.io/)
+
 
 ## Install
 
